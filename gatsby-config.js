@@ -9,7 +9,7 @@ module.exports = {
         siteTitleAlt: "Richban",
         siteTitle: "RICHBAN",
         siteHeadline: "Richban | Software Engineer | Data Engineer | ML Engineer",
-        siteUrl: "http://richban.live",
+        siteUrl: "https://richban.github.io/",
         siteDescription: "Personal site about software engineering",
         siteLanguage: "Eng",
         siteImage: "No site.png",
