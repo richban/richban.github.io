@@ -6,11 +6,11 @@ const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
 
 module.exports = {
     siteMetadata: {
-        siteTitleAlt: "Richban Pages",
+        siteTitleAlt: "Richban",
         siteTitle: "RICHBAN",
-        siteHeadline: "Empty",
+        siteHeadline: "Richban | Software Engineer | Data Engineer | ML Engineer",
         siteUrl: "http://richban.live",
-        siteDescription: "Good stuff",
+        siteDescription: "Personal site about software engineering",
         siteLanguage: "Eng",
         siteImage: "No site.png",
         author: "richban"
@@ -28,20 +28,20 @@ module.exports = {
                 ],
                 externalLinks: [
                     {
-                        name: "Notion",
-                        url: "https://www.notion.so/",
-                    },
-                    {
                         name: "Github",
                         url: "https://www.github.com/richban",
                     },
                     {
-                        name: "Twitter",
-                        url: "https://twitter.com/richban_",
+                        name: "Wiki",
+                        url: "https://richban.gitbook.io/rich-s-second-brain/"
                     },
                     {
-                        name: "LinkedIn",
-                        url: "https://www.linkedin.com/in/richbanyi/",
+                        name: "Notion",
+                        url: "https://www.notion.so/richban/Hello-I-m-Richban-5ba8108ce74f441fb2a3b4fbfb7a35f4",
+                    },
+                    {
+                        name: "Twitter",
+                        url: "https://twitter.com/richban_",
                     },
                 ],
             },
@@ -64,9 +64,9 @@ module.exports = {
         {
             resolve: "gatsby-plugin-manifest",
             options: {
-                name: "minimal-blog - @lekoarts/gatsby-theme-minimal-blog",
-                short_name: "minimal-blog",
-                description: "Typography driven, feature-rich blogging theme with minimal aesthetics. Includes tags/categories support and extensive features for code blocks such as live preview, line numbers, and code highlighting.",
+                name: "Richban Software Engineer",
+                short_name: "richban-minimal-blog",
+                description: "Personal site about software engineering",
                 start_url: "/",
                 background_color: "#fff",
                 theme_color: "#6B46C1",
@@ -86,6 +86,7 @@ module.exports = {
             },
         },
         "gatsby-plugin-offline",
+        "gatsby-plugin-react-helmet",
         "gatsby-plugin-netlify",
         shouldAnalyseBundle && {
             resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
