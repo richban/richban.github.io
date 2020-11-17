@@ -33,7 +33,7 @@ module.exports = {
                     },
                     {
                         name: "Wiki",
-                        url: "https://richban.gitbook.io/rich-s-second-brain/"
+                        url: "https://brain.richban.tech"
                     },
                     {
                         name: "Notion",
