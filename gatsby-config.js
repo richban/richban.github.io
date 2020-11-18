@@ -1,3 +1,8 @@
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+console.log(`Using environment config: '${activeEnv}'`)
+
 require("dotenv").config({
     path: ".env",
 })
@@ -9,7 +14,7 @@ module.exports = {
         siteTitleAlt: "Richban",
         siteTitle: "RICHBAN",
         siteHeadline: "Richban | Software Engineer | Data Engineer | ML Engineer",
-        siteUrl: "https://richban.github.io/",
+        siteUrl: "https://richban.tech",
         siteDescription: "Personal site about software engineering",
         siteLanguage: "Eng",
         siteImage: "No site.png",
@@ -18,7 +23,6 @@ module.exports = {
     plugins: [
         {
             resolve: "@lekoarts/gatsby-theme-minimal-blog",
-            // See the theme's README for all available options
             options: {
                 navigation: [
                     {
