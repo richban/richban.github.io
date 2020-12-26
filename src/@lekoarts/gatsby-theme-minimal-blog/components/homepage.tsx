@@ -14,35 +14,39 @@ import HeaderExternalLinks from "@lekoarts/gatsby-theme-minimal-blog/src/compone
 import Hero from "@lekoarts/gatsby-theme-minimal-blog/src/texts/hero"
 
 type PostsProps = {
-    posts: {
-        slug: string
-        title: string
-        date: string
-        excerpt: string
-        description: string
-        timeToRead?: number
-        tags?: {
-            name: string
-            slug: string
-        }[]
+  posts: {
+    slug: string
+    title: string
+    date: string
+    excerpt: string
+    description: string
+    timeToRead?: number
+    tags?: {
+      name: string
+      slug: string
     }[]
-    [key: string]: any
+  }[]
+  [key: string]: any
 }
 
 const Homepage = ({ posts }: PostsProps) => {
-    const { basePath, blogPath } = useMinimalBlogConfig()
-    const { siteTitle } = useSiteMetadata()
+  const { basePath, blogPath } = useMinimalBlogConfig()
+  const { siteTitle } = useSiteMetadata()
 
-    return (
-        <Layout>
-            <h1 sx={visuallyHidden}>{siteTitle}</h1>
-            <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 } }}>
-                <Hero />
-                <p/>
-                <HeaderExternalLinks />
-            </section>
-        </Layout>
-    )
+  return (
+    <Layout>
+      <h1 sx={visuallyHidden}>{siteTitle}</h1>
+      <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 } }}>
+        <Hero />
+        <p />
+        <HeaderExternalLinks />
+      </section>
+      <Title text="Latest Posts">
+        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
+      </Title>
+      <Listing posts={posts} showTags={false} />
+    </Layout>
+  )
 }
 
 export default Homepage
