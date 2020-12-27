@@ -1,18 +1,18 @@
 ---
 title: Python Development Environment 2020
-date: 2020-12-06
+date: 2020-12-27
 tags:
   - python
-  - development
   - neovim
+  - pyenv
+  - pipenv
 ---
 
 ### Introduction
 
 The objective of this post is to demonstrate my python development
 environment and describe the various tools I use to manage Python
-versions/packages. Lastly, I will showcase my python development workflow in
-Neovim.
+versions/packages.
 
 I will not go into detail and behind scenes to understand each tool but I will
 try to instead summarize in 1 or 2 sentences the problem and the solution for
@@ -107,7 +107,7 @@ To check that the python environment is set up correctly run the **Ex** command 
 Pipenv is a dependency manager for Python projects. It is my main driver for every python project which allows me to keep packages of different Python projects isolated from one another as well as specifying the required Python version for each project.
 
 ```bash
-# Preffered installation method via `pipx`
+# Preferred installation method via `pipx`
 pip install --user pipx
 pipx install pipenv
 # create a project directory
@@ -118,9 +118,9 @@ pipenv --python 3.9
 
 Under the hood **pipenv** utilizes tools such as:
 
-1. **virtualenv**
-2. **pip**
-3. **pyenv**
+1. **virtualenv** - makes sure that packages are isolated
+2. **pip** - fetches and installes packages
+3. **pyenv** - installs the specified python version
 
 ### Avoiding reinstalling Jupyter for all virtualenvs
 
@@ -160,3 +160,22 @@ pipenv run python -m ipykernel
 # open a new pane or terminal
 jupyter notebook
 ```
+
+### pipenv + neovim + tmux
+
+![pipenv-neovim](./pipenv-neovim.png)
+
+In order for [LSP]() to resolve your imports and indicate Neovim that you're inside a **virtualenv**,
+you have to spawn **Neovim** within the **virtualenv**: `pipenv run neovim` or spawn a subshell in the **virtualenv**
+and run **Neovim** inside:
+
+```bash
+# spawn subshell in virtualenv
+pipenv shell
+# run neovim
+neovim
+```
+
+However, if you're using [tmux]() and [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+in your workflow there is a known [issue](https://github.com/christoomey/vim-tmux-navigator/issues/195) when you
+try to navigate between your **Neovim** and **tmux** panes.
