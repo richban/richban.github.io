@@ -43,8 +43,16 @@ module.exports = {
             url: "https://www.notion.so/richban/Hello-I-m-Richban-5ba8108ce74f441fb2a3b4fbfb7a35f4",
           },
           {
+            name: "LinkedIn",
+            url: "https://www.linkedin.com/in/richbanyi/",
+          },
+          {
             name: "Twitter",
             url: "https://twitter.com/richban_",
+          },
+          {
+            name: "Instagram",
+            url: "https://instagram.com/richban_",
           },
         ],
       },
