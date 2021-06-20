@@ -9,7 +9,6 @@ import useMinimalBlogConfig from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/
 import useSiteMetadata from "@lekoarts/gatsby-theme-minimal-blog/src/hooks/use-site-metadata"
 import replaceSlashes from "@lekoarts/gatsby-theme-minimal-blog/src/utils/replaceSlashes"
 import { visuallyHidden } from "@lekoarts/gatsby-theme-minimal-blog/src/styles/utils"
-import HeaderExternalLinks from "@lekoarts/gatsby-theme-minimal-blog/src/components/header-external-links"
 // @ts-ignore
 import Hero from "@lekoarts/gatsby-theme-minimal-blog/src/texts/hero"
 
@@ -39,7 +38,6 @@ const Homepage = ({ posts }: PostsProps) => {
       <section sx={{ mb: [5, 6, 7], p: { fontSize: [1, 2, 3], mt: 2 } }}>
         <Hero />
         <p />
-        <HeaderExternalLinks />
       </section>
       // <Title text="Latest Posts">
       //   <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>

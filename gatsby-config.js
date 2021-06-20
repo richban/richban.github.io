@@ -1,8 +1,8 @@
 require("dotenv").config({
   path: ".env",
-})
+});
 
-const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE
+const shouldAnalyseBundle = process.env.ANALYSE_BUNDLE;
 
 module.exports = {
   siteMetadata: {
@@ -13,7 +13,7 @@ module.exports = {
     siteDescription: "Personal site about software engineering",
     siteLanguage: "Eng",
     siteImage: "No site.png",
-    author: "richban"
+    author: "richban",
   },
   plugins: [
     {
@@ -36,11 +36,12 @@ module.exports = {
           },
           {
             name: "Wiki",
-            url: "https://brain.richban.tech"
+            url: "https://brain.richban.tech",
           },
           {
             name: "Notion",
-            url: "https://www.notion.so/richban/Hello-I-m-Richban-5ba8108ce74f441fb2a3b4fbfb7a35f4",
+            url:
+              "https://www.notion.so/richban/Hello-I-m-Richban-5ba8108ce74f441fb2a3b4fbfb7a35f4",
           },
           {
             name: "LinkedIn",
@@ -101,5 +102,26 @@ module.exports = {
         openAnalyzer: false,
       },
     },
+    // {
+    //   resolve: `gatsby-transformer-remark`,
+    //   options: {
+    //     plugins: [
+    //       {
+    //         resolve: `gatsby-remark-highlight-code`,
+    //       },
+    //     ],
+    //   },
+    // },
+    // {
+    //   resolve: `gatsby-plugin-mdx`,
+    //   options: {
+    //     extensions: [".mdx", ".md"],
+    //     gatsbyRemarkPlugins: [
+    //       {
+    //         resolve: `gatsby-remark-highlight-code`,
+    //       },
+    //     ],
+    //   },
+    // },
   ].filter(Boolean),
-}
+};
