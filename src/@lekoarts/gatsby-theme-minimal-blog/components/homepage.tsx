@@ -41,10 +41,10 @@ const Homepage = ({ posts }: PostsProps) => {
         <p />
         <HeaderExternalLinks />
       </section>
-      <Title text="Latest Posts">
-        <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
-      </Title>
-      <Listing posts={posts} showTags={false} />
+      // <Title text="Latest Posts">
+      //   <Link to={replaceSlashes(`/${basePath}/${blogPath}`)}>Read all posts</Link>
+      // </Title>
+      // <Listing posts={posts} showTags={false} />
     </Layout>
   )
 }

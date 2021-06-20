@@ -65,12 +65,6 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
-    {
-      resolve: "gatsby-plugin-google-analytics",
-      options: {
-        trackingId: "UA-183551171-2",
-      },
-    },
     "gatsby-plugin-sitemap",
     {
       resolve: "gatsby-plugin-manifest",
