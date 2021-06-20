@@ -29,8 +29,6 @@
     "gatsby-plugin-sitemap": "^2.2.19",
     "gatsby-plugin-typescript": "^2.4.24",
     "gatsby-plugin-webpack-bundle-analyser-v2": "^1.1.10",
-    "gatsby-remark-highlight-code": "^3.0.0",
-    "gatsby-transformer-remark": "^4.4.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.1.0",
