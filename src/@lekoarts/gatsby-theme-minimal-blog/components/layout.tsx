@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import React from "react"
-import { Global } from "@emotion/core"
+import { Global } from "@emotion/react"
 import { Box, Container, jsx } from "theme-ui"
-import "typeface-ibm-plex-sans"
 import SEO from "@lekoarts/gatsby-theme-minimal-blog/src/components/seo"
 import Header from "@lekoarts/gatsby-theme-minimal-blog/src/components/header"
 import Footer from "@lekoarts/gatsby-theme-minimal-blog/src/components/footer"

@@ -4,7 +4,9 @@ import { tailwind } from "@theme-ui/presets"
 
 const theme = merge(tailwind, {
     initialColorModeName: "dark",
-    useLocalStorage: false,
+    config: {
+      useCustomProperties: true,
+    },
     colors: {
         text: "#fff",
         primary: "#3cf",
@@ -42,7 +44,7 @@ const theme = merge(tailwind, {
             MozOsxFontSmoothing: "grayscale",
         },
         p: {
-            fontSize: [2, 1, 2],
+            fontSize: [1, 1, 2],
             letterSpacing: "-0.003em",
             lineHeight: "body",
             "--baseline-multiplier": 0.179,
