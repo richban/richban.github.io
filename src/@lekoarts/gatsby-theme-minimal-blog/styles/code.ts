@@ -34,12 +34,13 @@ const code = {
   ".token": {
     display: `inline-block`,
   },
+  // This is the inline code block
   "p > code, li > code": {
-    bg: `gray.2`,
-    color: `gray.8`,
+    bg: `#343941`,
+    color: `#fff`,
     px: 1,
-    py: 0.75,
-    borderRadius: `3px`,
+    py: 0.15,
+    borderRadius: `5px`,
   },
   ".gatsby-highlight": {
     fontSize: [1, 1, 1],

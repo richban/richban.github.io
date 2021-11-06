@@ -19,6 +19,9 @@ module.exports = {
     {
       resolve: "@lekoarts/gatsby-theme-minimal-blog",
       options: {
+        showCopyButton: false,
+        showLineNumbers: false,
+        mdx: false,
         navigation: [
           {
             title: "About",
@@ -207,5 +210,37 @@ module.exports = {
         ],
       },
     },
+    {
+        resolve: `gatsby-plugin-mdx`,
+        options: {
+          lessBabel: true,
+          extensions: [`.mdx`, `.md`],
+          gatsbyRemarkPlugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 760,
+                quality: 90,
+                linkImagesToOriginal: false,
+                backgroundColor: `transparent`,
+              },
+            },
+                    {
+          resolve: `gatsby-remark-highlight-code`,
+        },
+          ],
+          plugins: [
+            {
+              resolve: `gatsby-remark-images`,
+              options: {
+                maxWidth: 960,
+                quality: 90,
+                linkImagesToOriginal: false,
+                backgroundColor: `transparent`,
+              },
+            },
+          ],
+        },
+      },
   ].filter(Boolean),
 };
