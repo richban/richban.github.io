@@ -11,6 +11,7 @@ tags:
 
 ### Introduction
 
+
 Let's all agree on this: writing code and executing Jupyter Notebooks is annoying as hell in the browser. All this inefficient code navigation, mouse-clicking, searching, you name it, is not an optimal approach in the long term. To overcome this issue I looked into ways how could I improve Jupyter Notebook (Python) development/workflow and this is the result: my most recent setup on how to bring the interactive development of Jupyter Notebooks or into your favorite editor Vim/[Neovim](https://github.com/neovim/neovim).
 
 > Note this post is mostly based on [Setting up a Neovim and pipenv based Python development environment](https://expectationmax.github.io/2018/Neovim-pipenv-based-development-environment/) and [NeoVim Notebooks](https://maxwellrules.com/misc/nvim_jupyter.html) with a few caveats :)
@@ -18,7 +19,7 @@ Let's all agree on this: writing code and executing Jupyter Notebooks is annoyin
 
  This setup is powered by the following plugins:
 
-```:title=plugins.lua noLineNumbers
+```lua
 use 'untitled-ai/jupyter_ascending.vim'
 use 'bfredl/nvim-ipy'
 use 'hkupty/iron.nvim'
@@ -110,9 +111,7 @@ vim.cmd [[nmap [x ctrah/^# %%<CR><CR>]]
 
 For `nvim-ipy` I use the `]h` and `]h` motions to jump between cells and execute them by:
 
-```
-vim.cmd [[map <leader>rc <Plug>(IPy-RunCell)]]
-```
+`vim.cmd [[map <leader>rc <Plug>(IPy-RunCell)]]`
 
 ### jupyter_ascending
 
@@ -122,9 +121,7 @@ Jupyter Ascending syncs the state between `*.py` file and a running Jupyter `*.i
 
 At the moment, it requires to name the python files that end with `.sync.py` and the Jupyter notebook with names that end with `.sync.ipynb`. So for each Jupyter notebook in JSON format, you will have to generate the python file in the hydrogen format. Fortunately `jupyter_ascending` provides a script that takes care of this:
 
-```
-python -m jupyter_ascending.scripts.make_pair --base examples/test.py
-```
+`python -m jupyter_ascending.scripts.make_pair --base examples/test.py`
 
 The instructions for installing and running `jupyter_ascending` are well documented on [github](https://github.com/untitled-ai/jupyter_ascending). To interact with `jupyter_ascending` from Vim/Neovim install the [jupyter_ascending.vim](https://github.com/untitled-ai/jupyter_ascending.vim) plugin. Currently, the plugin contains a minor "bug" which causes that the notebooks are not synchronized automatically - my [PR](https://github.com/untitled-ai/jupyter_ascending.vim/pull/4/commits/015eb39ffaaa80af90cdbd35bd68234b269f52c7) should fix this issue.
 
@@ -147,7 +144,7 @@ vim.cmd[[ nnoremap <silent><c-X> <Plug>JupyterExecuteAll ]]
 
 I have the following commands defined in my [`python.lua`]() config file which I have copy-pasted from [Max](https://expectationmax.github.io/2018/Neovim-pipenv-based-development-environment/) ;). With these commands, I start the `ipykernel`, lunch QT console, connect to the given kernel, and so forth.
 
-```vimscript
+```javascript
 " Starts Qt console and connect to pipenv ipykernel
 command! -nargs=0 RunQtPipenv call StartConsolePipenv('jupyter qtconsole')
 
