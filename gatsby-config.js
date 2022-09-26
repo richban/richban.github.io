@@ -8,7 +8,7 @@ module.exports = {
   siteMetadata: {
     siteTitleAlt: "Richban",
     siteTitle: "RICHBAN",
-    siteHeadline: "Richban | Software Engineer | Data Engineer | ML Engineer",
+    siteHeadline: "Richban | Software Engineer | Data Engineer",
     siteUrl: "https://richban.tech",
     siteDescription: "Personal site about software engineering",
     siteLanguage: "Eng",
@@ -20,14 +20,14 @@ module.exports = {
       resolve: "@lekoarts/gatsby-theme-minimal-blog",
       options: {
         navigation: [
-          {
-            title: "About",
-            slug: "/about",
-          },
-          {
-            title: "Blog",
-            slug: "/blog",
-          },
+          // {
+          //   title: "About",
+          //   slug: "/about",
+          // },
+          // {
+          //   title: "Blog",
+          //   slug: "/blog",
+          // },
         ],
         externalLinks: [
           {
@@ -35,26 +35,26 @@ module.exports = {
             url: "https://www.github.com/richban",
           },
           {
-            name: "Wiki",
-            url: "https://brain.richban.tech",
+            name: "Digital Garden",
+            url: "https://richban-digital-garden.netlify.app",
           },
           {
             name: "Notion",
             url:
               "https://www.notion.so/richban/Hello-I-m-Richban-5ba8108ce74f441fb2a3b4fbfb7a35f4",
           },
-          {
-            name: "LinkedIn",
-            url: "https://www.linkedin.com/in/richbanyi/",
-          },
+          // {
+          //   name: "LinkedIn",
+          //   url: "https://www.linkedin.com/in/richbanyi/",
+          // },
           {
             name: "Twitter",
             url: "https://twitter.com/richban_",
           },
-          {
-            name: "Instagram",
-            url: "https://instagram.com/richban_",
-          },
+          // {
+          //   name: "Instagram",
+          //   url: "https://instagram.com/richban_",
+          // },
         ],
       },
     },

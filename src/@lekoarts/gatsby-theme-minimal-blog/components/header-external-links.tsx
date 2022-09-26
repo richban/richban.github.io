@@ -30,12 +30,7 @@ const HeaderExternalLinks = () => {
               href={link.url}
               target="_blank"
               sx={{display:'flex', "&>:hover": hoverStyle[link.name]}}>
-              {link.name === 'Github' && <FaGithub/>}
-              {link.name === 'Twitter' && <FaTwitter/>}
-              {link.name === 'Instagram' && <FaInstagram/>}
-              {link.name === 'LinkedIn' && <FaLinkedin/>}
-              {link.name === 'Notion' && <SiNotion/>}
-              {link.name === 'Wiki' && <SiWebpack/>}
+              {link.name}
             </TLink>
           ))}
         </div>

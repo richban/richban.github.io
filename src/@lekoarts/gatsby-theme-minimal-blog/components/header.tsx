@@ -37,7 +37,6 @@ const Header = () => {
         }}
       >
         <Navigation nav={nav} />
-        <HeaderExternalLinks />
       </div>
     </header>
   )
